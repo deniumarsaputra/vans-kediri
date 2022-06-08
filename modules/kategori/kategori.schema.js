@@ -3,27 +3,20 @@ const { responses } = require("../common.schema");
 const data = {
   type: "object",
   properties: {
-    _id: { type: "string", example: "_id user" },
-    username: { type: "string", example: "username user" },
-    email: { type: "string", example: "email user" },
-    password: { type: "string", example: "password user" },
-    isActive: { type: "boolean", example: "status user" },
+    _id: { type: "string", example: "_id kategori" },
+    name: { type: "string", example: "name kategori" }
   },
 };
 
 module.exports = {
   get: {
-    tags: ["System User"],
-    summary: "Ambil Semua Data System User",
-    description: "Endpoint untuk mengambil semua data system user",
+    tags: ["Kategori"],
+    summary: "Ambil Semua Data Kategori",
+    description: "Endpoint untuk mengambil semua data kategori",
     querystring: {
-      username: {
+      name: {
         type: "string",
         description: "Query untuk melakukan search berdasarkan nama",
-      },
-      status: {
-        type: "string",
-        description: "Query untuk filter berdasarkan status system user",
       },
     },
     response: {
@@ -48,12 +41,12 @@ module.exports = {
   },
 
   getById: {
-    tags: ["System User"],
-    summary: "Ambil Detail Data System User Berdasarkan ID",
-    description: "Endpoint untuk mengambil detail data system user",
+    tags: ["Kategori"],
+    summary: "Ambil Detail Data Kategori Berdasarkan ID",
+    description: "Endpoint untuk mengambil detail data kategori",
     params: {
       type: "object",
-      properties: { id: { type: "string", description: "Id System User" } },
+      properties: { id: { type: "string", description: "Id kategori" } },
     },
     response: {
       200: {
@@ -69,16 +62,14 @@ module.exports = {
   },
 
   post: {
-    tags: ["System User"],
-    summary: "Tambah Data System User",
-    description: "Endpoint untuk menambah data system user",
+    tags: ["Kategori"],
+    summary: "Tambah Data Kategori",
+    description: "Endpoint untuk menambah data kategori",
     body: {
       type: "object",
-      required: ["username", "email", "password"],
+      required: ["name"],
       properties: {
-        username: { type: "string", example: "username user" },
-        email: { type: "string", example: "email user" },
-        password: { type: "string", example: "password user" },
+        name: { type: "string", example: "name kategori" },
       },
     },
     response: {
@@ -95,21 +86,18 @@ module.exports = {
   },
 
   put: {
-    tags: ["System User"],
-    summary: "Update Data System User Berdasarkan ID",
-    description: "Endpoint untuk update data system user",
+    tags: ["Kategori"],
+    summary: "Update Data Kategori Berdasarkan ID",
+    description: "Endpoint untuk update data kategori",
     params: {
       type: "object",
-      properties: { id: { type: "string", description: "Id System User" } },
+      properties: { id: { type: "string", description: "Id Kategori" } },
     },
     body: {
       type: "object",
-      required: ["username", "email", "password"],
+      required: ["name"],
       properties: {
-        username: { type: "string", example: "username user" },
-        email: { type: "string", example: "email user" },
-        password: { type: "string", example: "password user" },
-        status: { type: "boolean", example: "status user" },
+        name: { type: "string", example: "name kategori" },
       },
     },
     response: {
@@ -125,12 +113,12 @@ module.exports = {
   },
 
   deletes: {
-    tags: ["System User"],
-    summary: "Hapus Data System User Berdasarkan ID",
-    description: "Endpoint untuk hapus data system user",
+    tags: ["Kategori"],
+    summary: "Hapus Data Kategori Berdasarkan ID",
+    description: "Endpoint untuk hapus data kategori",
     params: {
       type: "object",
-      properties: { id: { type: "string", description: "Id System User" } },
+      properties: { id: { type: "string", description: "Id Kategori" } },
     },
     response: {
       200: {
