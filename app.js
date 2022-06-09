@@ -14,6 +14,8 @@ fastify.get("/", async () => ({Welcome : "API-DASHBOARD WORLD"}))
 fastify.register(require("./modules/sysUser/sysUser.route"))
 fastify.register(require("./modules/auth/auth.route"))
 fastify.register(require("./modules/kategori/kategori.route"))
+fastify.register(require("./modules/user/user.route"))
+fastify.register(require("./modules/produk/produk.route"))
 
 const start = async () => {
     try {
