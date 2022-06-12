@@ -3,9 +3,9 @@ const { responses } = require("../common.schema");
 const data = {
   type: "object",
   properties: {
-    _id: { type: "string", example: "_id user" },
-    username: { type: "string", example: "username user" },
-    email: { type: "string", example: "email user" },
+    _id: { type: "string", description: "_id user" },
+    username: { type: "string", description: "username user" },
+    email: { type: "string", description: "email user" },
   },
 };
 
@@ -18,8 +18,8 @@ module.exports = {
             type: "object",
             required: ["email","password"],
             properties: {
-                email: {type: "string", example: "email system user"},
-                password: {type: "string", example: "password system user"}
+                email: {type: "string", description: "email system user"},
+                password: {type: "string", description: "password system user"}
             }
         },
         response: {

@@ -3,8 +3,8 @@ const { responses } = require("../common.schema");
 const data = {
   type: "object",
   properties: {
-    _id: { type: "string", example: "_id kategori" },
-    name: { type: "string", example: "name kategori" }
+    _id: { type: "string", description: "_id kategori" },
+    name: { type: "string", description: "name kategori" }
   },
 };
 
@@ -69,7 +69,7 @@ module.exports = {
       type: "object",
       required: ["name"],
       properties: {
-        name: { type: "string", example: "name kategori" },
+        name: { type: "string", description: "name kategori" },
       },
     },
     response: {
@@ -97,7 +97,7 @@ module.exports = {
       type: "object",
       required: ["name"],
       properties: {
-        name: { type: "string", example: "name kategori" },
+        name: { type: "string", description: "name kategori" },
       },
     },
     response: {

@@ -3,11 +3,11 @@ const { responses } = require("../common.schema");
 const data = {
   type: "object",
   properties: {
-    _id: { type: "string", example: "_id user" },
-    username: { type: "string", example: "username user" },
-    email: { type: "string", example: "email user" },
-    password: { type: "string", example: "password user" },
-    isActive: { type: "boolean", example: "status user" },
+    _id: { type: "string", description: "_id user" },
+    username: { type: "string", description: "username user" },
+    email: { type: "string", description: "email user" },
+    password: { type: "string", description: "password user" },
+    isActive: { type: "boolean", description: "status user" },
   },
 };
 
@@ -76,9 +76,9 @@ module.exports = {
       type: "object",
       required: ["username", "email", "password"],
       properties: {
-        username: { type: "string", example: "username user" },
-        email: { type: "string", example: "email user" },
-        password: { type: "string", example: "password user" },
+        username: { type: "string", description: "username user" },
+        email: { type: "string", description: "email user" },
+        password: { type: "string", description: "password user" },
       },
     },
     response: {
@@ -106,10 +106,10 @@ module.exports = {
       type: "object",
       required: ["username", "email", "password"],
       properties: {
-        username: { type: "string", example: "username user" },
-        email: { type: "string", example: "email user" },
-        password: { type: "string", example: "password user" },
-        status: { type: "boolean", example: "status user" },
+        username: { type: "string", description: "username user" },
+        email: { type: "string", description: "email user" },
+        password: { type: "string", description: "password user" },
+        status: { type: "boolean", description: "status user" },
       },
     },
     response: {

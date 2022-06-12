@@ -3,16 +3,16 @@ const { responses } = require("../common.schema");
 const data = {
   type: "object",
   properties: {
-    _id: { type: "string", example: "_id produk" },
-    kode: {type: "string", example: "kode produk"},
-    name: {type: "string", example: "nama produk"},
-    price: {type: "number", example: "harga produk"},
-    stock: {type: "number", example:  "stok produk"},
-    categori: {type: "object", properties: {_id: {type: "string", example: "id kategori"}, name: {type: "string", example: "nama kategori"}}},
-    description: {type: "string", example: "deskripsi produk"},
-    tags: {type: "string", example:"tag produk"},
-    photos: {type: "object", properties: {p1: {type: "string", example: "photo 1"}, p2: {type: "string", example: "photo 2"}, p3: {type: "string", example: "photo3"}}},
-    realease: {type: "boolean", example: "status produk"}
+    _id: { type: "string", description: "_id produk" },
+    kode: {type: "string", description: "kode produk"},
+    name: {type: "string", description: "nama produk"},
+    price: {type: "number", description: "harga produk"},
+    stock: {type: "number", description:  "stok produk"},
+    categori: {type: "object", properties: {_id: {type: "string", description: "id kategori"}, name: {type: "string", description: "nama kategori"}}},
+    description: {type: "string", description: "deskripsi produk"},
+    tags: {type: "string", description:"tag produk"},
+    photos: {type: "object", properties: {p1: {type: "string", description: "photo 1"}, p2: {type: "string", description: "photo 2"}, p3: {type: "string", description: "photo3"}}},
+    realease: {type: "boolean", description: "status produk"}
   },
 };
 
@@ -85,14 +85,14 @@ module.exports = {
       type: "object",
       required: ["kode","name","price","stock", "categori", "description", "tags", "photos"],
       properties: {
-        kode: { type: "string", example: "kode produk" },
-        name: { type: "string", example: "nama produk "},
-        price: { type: "string", example: "harga produk"},
-        stock: { type: "string", example: "stok produk"},
-        categori: {type: "string", example: "kategori produk"},
-        description: {type: "string", example: "deskripsi produk"},
-        tags: {type: "string", example: "tag produk"},
-        photos: {type: "object", properties: {p1: {type: "string", example:"photo produk 1"}, p2: {type: "string", example:"photo produk 2"}, p3: {type: "string", example: "photo produk 3"}}}
+        kode: { type: "string", description: "kode produk" },
+        name: { type: "string", description: "nama produk "},
+        price: { type: "string", description: "harga produk"},
+        stock: { type: "string", description: "stok produk"},
+        categori: {type: "string", description: "kategori produk"},
+        description: {type: "string", description: "deskripsi produk"},
+        tags: {type: "string", description: "tag produk"},
+        photos: {type: "object", properties: {p1: {type: "string", description:"photo produk 1"}, p2: {type: "string", description:"photo produk 2"}, p3: {type: "string", description: "photo produk 3"}}}
       },
     },
     response: {
@@ -120,15 +120,15 @@ module.exports = {
         type: "object",
         required: ["kode","name","price","stock", "categori", "description", "tags", "photos"],
         properties: {
-          kode: { type: "string", example: "kode produk" },
-          name: { type: "string", example: "nama produk "},
-          price: { type: "string", example: "harga produk"},
-          stock: { type: "string", example: "stok produk"},
-          categori: {type: "string", example: "kategori produk"},
-          description: {type: "string", example: "deskripsi produk"},
-          tags: {type: "string", example: "tag produk"},
-          status: {type: "string", example: "status realease produk"},
-          photos: {type: "object", properties: {p1: {type: "string", example:"photo produk 1"}, p2: {type: "string", example:"photo produk 2"}, p3: {type: "string", example: "photo produk 3"}}}
+          kode: { type: "string", description: "kode produk" },
+          name: { type: "string", description: "nama produk "},
+          price: { type: "string", description: "harga produk"},
+          stock: { type: "string", description: "stok produk"},
+          categori: {type: "string", description: "kategori produk"},
+          description: {type: "string", description: "deskripsi produk"},
+          tags: {type: "string", description: "tag produk"},
+          status: {type: "string", description: "status realease produk"},
+          photos: {type: "object", properties: {p1: {type: "string", description:"photo produk 1"}, p2: {type: "string", description:"photo produk 2"}, p3: {type: "string", description: "photo produk 3"}}}
         },
     },
     response: {
