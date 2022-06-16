@@ -10,7 +10,7 @@ const {get, getById, post, put, deletes} = require('./produk.schema')
 async function routes(fastify, opts) {
   fastify.post("/produk", {schema: post}, async (req, reply) => {
     try {
-      const { kode, name, price, stock, categori, description, tags } =
+      const { kode, name, price, categori, description, tags } =
         req.body;
       const photos = {
         p1: req.body.photos.p1,
@@ -25,7 +25,6 @@ async function routes(fastify, opts) {
           kode: kode,
           name: name,
           price: price,
-          stock: stock,
           categori: categori,
           description: description,
           tags: tags,
@@ -103,7 +102,7 @@ async function routes(fastify, opts) {
 
   fastify.put("/produk/:id", {schema: put}, async (req, reply) => {
     try {
-      const { kode, name, price, stock, categori, description, tags, status } =
+      const { kode, name, price, categori, description, tags, status } =
         req.body;
       const photos = {
         p1: req.body.photos.p1,
@@ -124,7 +123,6 @@ async function routes(fastify, opts) {
             kode: kode,
             name: name,
             price: price,
-            stock: stock,
             categori: categori,
             description: description,
             tags: tags,

@@ -5,7 +5,6 @@ const schema = new mongoose.Schema({
     kode: String,
     name: String,
     price: Number,
-    stock: Number,
     categori: {type: ObjectID, ref: "Kategori"},
     description: String,
     tags: String,

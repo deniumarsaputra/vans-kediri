@@ -7,7 +7,6 @@ const data = {
     kode: {type: "string", description: "kode produk"},
     name: {type: "string", description: "nama produk"},
     price: {type: "number", description: "harga produk"},
-    stock: {type: "number", description:  "stok produk"},
     categori: {type: "object", properties: {_id: {type: "string", description: "id kategori"}, name: {type: "string", description: "nama kategori"}}},
     description: {type: "string", description: "deskripsi produk"},
     tags: {type: "string", description:"tag produk"},
@@ -83,12 +82,11 @@ module.exports = {
     description: "Endpoint untuk menambah data produk",
     body: {
       type: "object",
-      required: ["kode","name","price","stock", "categori", "description", "tags", "photos"],
+      required: ["kode","name","price", "categori", "description", "tags", "photos"],
       properties: {
         kode: { type: "string", description: "kode produk" },
         name: { type: "string", description: "nama produk "},
         price: { type: "string", description: "harga produk"},
-        stock: { type: "string", description: "stok produk"},
         categori: {type: "string", description: "kategori produk"},
         description: {type: "string", description: "deskripsi produk"},
         tags: {type: "string", description: "tag produk"},
@@ -118,12 +116,11 @@ module.exports = {
     },
     body: {
         type: "object",
-        required: ["kode","name","price","stock", "categori", "description", "tags", "photos"],
+        required: ["kode","name","price","categori", "description", "tags", "photos"],
         properties: {
           kode: { type: "string", description: "kode produk" },
           name: { type: "string", description: "nama produk "},
           price: { type: "string", description: "harga produk"},
-          stock: { type: "string", description: "stok produk"},
           categori: {type: "string", description: "kategori produk"},
           description: {type: "string", description: "deskripsi produk"},
           tags: {type: "string", description: "tag produk"},
